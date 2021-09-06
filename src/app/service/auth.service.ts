@@ -25,6 +25,11 @@ export class AuthService {
 
   }
 
+  getByIdUsuario(id: number): Observable<Usuario>{
+    return this.http.get<Usuario>(`https://jaqueblog.herokuapp.com/usuarios/${id}`)
+
+  }
+
   logado(){
     let ok: boolean = false
     if(environment.token != ''){
