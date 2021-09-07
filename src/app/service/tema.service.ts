@@ -26,6 +26,10 @@ return this.http.get<Tema[]>('https://jaqueblog.herokuapp.com/temas',this.token)
 
   }
 
+  getByNomeTema(nome: string): Observable<Tema[]>{
+    return this.http.get<Tema[]>(`https://jaqueblog.herokuapp.com/postagens/nome/${nome}`, this.token)}
+  
+
   postTema(tema: Tema): Observable<Tema> {
     return this.http.post<Tema>('https://jaqueblog.herokuapp.com/temas', tema, this.token)
 
