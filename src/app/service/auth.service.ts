@@ -37,4 +37,11 @@ export class AuthService {
     } return ok
     //o environment token for diferente do vazio então ele é true, existe senha armazenada e há login feito.//
   }
+
+  adm(){
+    let ok: boolean = false
+    if(environment.tipo == 'adm'){
+      ok = true
+    } return ok
+  }
 }
